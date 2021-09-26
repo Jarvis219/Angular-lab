@@ -1,0 +1,52 @@
+<h2>Post form</h2>
+
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name post</label>
+    <input
+      type="text"
+      class="form-control"
+      name="title"
+      [(ngModel)]="formObject.title"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Photo</label>
+    <input
+      type="text"
+      class="form-control"
+      name="imgUrl"
+      [(ngModel)]="formObject.imgUrl"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Cate post</label>
+    <input
+      type="text"
+      class="form-control"
+      name="catename"
+      [(ngModel)]="formObject.catename"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Description</label>
+    <textarea
+      name="shortDesc"
+      class="form-control"
+      [(ngModel)]="formObject.shortDesc"
+      id=""
+      cols="30"
+      rows="10"
+    ></textarea>
+  </div>
+
+  <button type="submit" (click)="saveForm()" class="btn btn-primary">
+    Save
+  </button>
+</form>

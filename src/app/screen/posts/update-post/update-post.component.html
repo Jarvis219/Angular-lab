@@ -1,0 +1,53 @@
+<h2>update form</h2>
+<div class="">
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name post</label>
+      <input
+        type="text"
+        class="form-control"
+        name="title"
+        [(ngModel)]="postData.title"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Photo</label>
+      <input
+        type="text"
+        class="form-control"
+        name="imgUrl"
+        [(ngModel)]="postData.imgUrl"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Cate post</label>
+      <input
+        type="text"
+        class="form-control"
+        name="catename"
+        [(ngModel)]="postData.catename"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Description</label>
+      <textarea
+        name="shortDesc"
+        class="form-control"
+        [(ngModel)]="postData.shortDesc"
+        id=""
+        cols="30"
+        rows="10"
+      ></textarea>
+    </div>
+
+    <button type="submit" (click)="update()" class="btn btn-primary">
+      Update
+    </button>
+  </form>
+</div>

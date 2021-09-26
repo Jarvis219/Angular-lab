@@ -1,0 +1,22 @@
+<div class="container mx-auto">
+  <div class="flex justify-center items-center gap-20">
+    <div>
+      <app-form-post (onSave)="saveForm($event)"></app-form-post>
+    </div>
+    <div>
+      <app-update-post
+        [postData]="dataUpdate"
+        (onUpdateChild)="updateParents($event)"
+      ></app-update-post>
+    </div>
+  </div>
+  <div class="flex mt-10">
+    <div *ngFor="let item of posts">
+      <app-post
+        [postData]="item"
+        (onUpdate)="update($event)"
+        (onRemove)="delete($event)"
+      ></app-post>
+    </div>
+  </div>
+</div>
